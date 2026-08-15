@@ -3,5 +3,7 @@ nav:
   - Inicio: index.md
   - Sobre nosotros: about.md
 theme: material
+  lenguage: es
+  
 
 
