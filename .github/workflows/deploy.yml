@@ -26,6 +26,6 @@ jobs:
     - name: Build and deploy
       run: |
         mkdocs build
-        ghp-import -n -p -b gh-pages site
+        ghp-import -n -p -f -b gh-pages site
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
