@@ -5,7 +5,7 @@ Pasos necesarios para instalar y configurar el proyecto.
 - Requisito 1
 - Requisito 2
 ### Pasos de Instalación
-1. Paso 1: Descripción.
+1. Paso 1: No veo nada.
 2. Paso 2: Descripción.
 ## Sección 2: Uso
 Guía sobre cómo utilizar el proyecto después de instalarlo.
