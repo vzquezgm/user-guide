@@ -2,8 +2,9 @@ site_name: Guia de usuario APP
 nav:
   - Inicio: index.md
   - Sobre nosotros: about.md
-theme: material
+theme: 
+  name : material
   lenguage: es
-  
+
 
 
