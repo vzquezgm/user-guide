@@ -1,8 +1,15 @@
 name: Deploy Documentation
+
 on:
   push:
     branches:
       - main  # O la rama que desees usar
+
+# --- ESTE ES EL BLOQUE NUEVO QUE SOLUCIONA EL ERROR ---
+permissions:
+  contents: write
+# -----------------------------------------------------
+
 jobs:
   build:
     runs-on: ubuntu-latest
