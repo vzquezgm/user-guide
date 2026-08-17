@@ -4,7 +4,7 @@ repo_name: Repositorio GitHub
 edit_uri: edit/main/docs/
 nav:
   - Inicio: index.md
-  - Sobre nosotros: about.md
+  - Sobre nosotros: 0.Introduccion.md
 theme: 
   name : material
   language: es
