@@ -12,6 +12,10 @@ theme:
   icon:
     logo: fontawesome/brands/gitlab
 
+# Se agrega la extensión de snippets para incluir fragmentos de código en los documentos #
+markdown_extensions:
+  - pymdownx.snippets
+
 # Se agrega MathJax para renderizar fórmulas matemáticas #
 
 markdown_extensions:

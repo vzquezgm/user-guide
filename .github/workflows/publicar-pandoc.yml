@@ -1,0 +1,45 @@
+name: Convertir LaTeX a Markdown y Publicar
+
+on:
+  push:
+    branches:
+      - main
+
+# Autorizamos al bot para que pueda sobrescribir la página web
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+
+      # Instalamos Pandoc en el servidor
+      - name: Instalar Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
+
+      # Ejecutamos la traducción para TODOS los archivos .tex
+      - name: Convertir todos los archivos LaTeX a Markdown
+        run: |
+          for archivo in *.tex; do
+            # Extraemos el nombre original sin la extensión .tex 
+            nombre_base=$(basename "$archivo" .tex)
+            # Ejecutamos Pandoc y lo guardamos en docs/ con extensión .md
+            pandoc "$archivo" -o "docs/${nombre_base}.md"
+          done
+      # Preparamos MkDocs
+      - name: Instalar MkDocs y extensiones
+        run: pip install mkdocs mkdocs-material ghp-import
+
+      # Construimos y forzamos la publicación en gh-pages
+      - name: Construir y publicar página
+        run: |
+          mkdocs build
+          ghp-import -n -p -f -b gh-pages site
