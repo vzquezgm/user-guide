@@ -5,6 +5,5 @@ nav:
 theme: 
   name : material
   language: es
-
-
-
+  icon:
+    logo: material/library 
