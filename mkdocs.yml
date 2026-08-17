@@ -1,4 +1,6 @@
 site_name: Guia de usuario APP
+repo_url: https://github.com/vzquezgm/user-guide/settings/pages
+repo_name: GitHub
 nav:
   - Inicio: index.md
   - Sobre nosotros: about.md
